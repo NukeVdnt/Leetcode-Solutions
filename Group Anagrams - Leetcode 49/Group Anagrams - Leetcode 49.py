@@ -23,7 +23,8 @@ class Solution:
             key = tuple(count)
             anagrams_dict[key].append(s)
 
-        return anagrams_dict.values()
+        # converting the dict.values iterable to list, fixes the return type error
+        return list(anagrams_dict.values())
 # n is the number of strings, m is the length of largest string
 # Time Complexity: O(n * m)
 # Space Complexity: O(n * m)
